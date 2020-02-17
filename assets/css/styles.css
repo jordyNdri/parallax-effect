@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Cinzel";
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: rgb(63, 5, 5);
+    font-family: "Cinzel";
+    background: #121212;
+
+    /** */
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+
+header h1 {
+    margin-top: -100px;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+header p {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+header, header::before {
+    background: 50% 50% / cover;
+}
+header::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    display: block;
+    background-image: url(../images/bg-img.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+header * {
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 5rem;
+    padding: 2rem;
+    height: 100%;
+    color: wheat;
+    font-weight: 600;
+}
+
+.author {
+    border-bottom: 2px wheat dashed;
+}
+
